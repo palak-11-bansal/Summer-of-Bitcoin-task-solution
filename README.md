@@ -8,7 +8,7 @@
 1. Read a file mempool.csv, and make unordered map of txid , fee , weight , parent_txids
 2. Make a fuction to check if the transaction is valid or not. It will be valid only if it's parent transactions have been included before.
 3. We need to devise an alogrithm such that total fee of the block containing valid transaction is maximized under a constraint that weight of the block does not exceed 4000000. 
-# Approch used:
+# Approach used:
  This is basically a optimization problem which can be solved using Knapsack algorithm: greedy method.
 * Select the transactions with highest value of fee/weight. The logic behind this is to minimize the leftover weight and maximize the fee.
 * Check if the selected transaction is valid. That is all its parents are already included in the block.
